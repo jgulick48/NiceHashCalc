@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Security.Cryptography;
 using Flurl;
 using Flurl.Http;
+using System.Configuration;
 
 namespace NiceHashCalc
 {   
@@ -14,13 +15,13 @@ namespace NiceHashCalc
     {
         static void Main(string[] args)
         {   //UPDATE TO YOUR OWN VALUES
-            string CoinbaseAPIKey = "ThisIsYourCoinbaseAPIKey";
-            string CoinbaseAPISecret = "ThisIsYourCoinbaseAPISecret";
-            string CoinbaseAccount = "ThisIsYourCoinbaseAccount";
-            string NiceHashAddress = "ThisIsYourNiceHashMiningAddress";
-            string NiceHashAPIId = "ThisIsyourNiceHashAPIId";
-            string NiceHashAPIKey = "ThisIsYourNiceHashAPIReadOnlyKey";
-            double TargetProfits = 1000000.00;
+			string CoinbaseAPIKey = ConfigurationManager.AppSettings["CoinbaseAPIKey"];
+            string CoinbaseAPISecret = ConfigurationManager.AppSettings["CoinbaseAPISecret"];
+			string CoinbaseAccount = ConfigurationManager.AppSettings["CoinbaseAccount"];
+			string NiceHashAddress = ConfigurationManager.AppSettings["NiceHashAddress"];
+			string NiceHashAPIId = ConfigurationManager.AppSettings["NiceHashAPIId"];
+			string NiceHashAPIKey = ConfigurationManager.AppSettings["NiceHashAPIKey"];
+			double TargetProfits = 1000000.00;
             DateTime StartDate = new DateTime(2018, 01, 01);
             DateTime TargetProfitDate = new DateTime(2030, 12, 31);
             //BEGIN EXECUTION LOOP

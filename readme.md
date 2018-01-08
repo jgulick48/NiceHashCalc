@@ -4,10 +4,9 @@ This application is console applictaion that gets your current BTC balance on Co
 
 ![image](https://user-images.githubusercontent.com/20748167/34656980-230ac110-f3e7-11e7-9e85-62d643925b4b.png)
 
-1. Download Visual Studio Community https://www.visualstudio.com/vs/community/
-2. Create Coinbase API Keys with wallet:accounts:read permissions on your main BTC wallet
-3. Create NiceHash API Keys by going to NiceHash -> Settings -> API and create read only key
-4. Open the project in visual studio and modify in Nicehash.cs -
+1. Create Coinbase API Keys with wallet:accounts:read permissions on your main BTC wallet
+2. Create NiceHash API Keys by going to NiceHash -> Settings -> API and create read only key
+3. Open the NiceHash Calc.exe.config file -
 
 CoinbaseAPIKey - This should be your API Key from Coinbase
 
@@ -27,6 +26,6 @@ StartDate - The day you started mining and were receiving payouts to Coinbase
 
 TargetProfitDate - The date you want to reach your Target Profit By
 
-5. Build the application and copy all DLL and exe from the Bin/Release directory that was created to another folder and run the EXE file. 
+5. Run the EXE file. 
 
 Coinbase Implementation was taken from - https://github.com/iYalovoy/demibyte.coinbase
